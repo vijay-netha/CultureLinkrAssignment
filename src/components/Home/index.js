@@ -10,7 +10,7 @@ const Home = () => {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (event) => {
+  const onClickChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -37,7 +37,7 @@ const Home = () => {
               type="text"
               name="name"
               value={formData.name}
-              onChange={handleChange}
+              onChange={onClickChange}
               id='nameId'
               required
             />
@@ -48,7 +48,7 @@ const Home = () => {
               type="email"
               name="email"
               value={formData.email}
-              onChange={handleChange}
+              onChange={onClickChange}
               id='emailId'
               required
             />
@@ -59,7 +59,7 @@ const Home = () => {
               name="message"
               cols={25} rows={5}
               value={formData.message}
-              onChange={handleChange}
+              onChange={onClickChange}
               id='messageId'
               required
             />
